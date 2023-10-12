@@ -1,6 +1,7 @@
 import Profile from './profile/Profile';
 import Statistics from './statistics/Statistics';
 import FriendList from './friends/FriendList';
+import TransactionHistory from './transactions/TransactionHistory';
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
       <Profile />
       <Statistics />
       <FriendList />
+      <TransactionHistory />
     </div>
   );
 };
