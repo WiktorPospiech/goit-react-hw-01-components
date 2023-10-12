@@ -2,7 +2,7 @@ import user from 'components/profile/user.json';
 
 export default function Profile() {
   return (
-    <div>
+    <div class="profile">
       <div class="description">
         <img src={user.avatar} alt="User avatar" class="avatar" />
         <p class="name">{user.username}</p>
