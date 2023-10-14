@@ -1,27 +1,28 @@
 import user from 'components/profile/user.json';
+import styles from 'components/profile/profile.module.css';
 
 export default function Profile() {
   return (
-    <div class="profile">
-      <div class="description">
-        <img src={user.avatar} alt="User avatar" class="avatar" />
-        <p class="name">{user.username}</p>
-        <p class="tag">{user.tag}</p>
-        <p class="location">{user.location}</p>
+    <div className={styles.profile}>
+      <div className={styles.description}>
+        <img src={user.avatar} alt="User avatar" className={styles.avatar} />
+        <p className={styles.name}>{user.username}</p>
+        <p className={styles.tag}>{user.tag}</p>
+        <p className={styles.location}>{user.location}</p>
       </div>
 
-      <ul class="stats">
-        <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{user.stats.followers}</span>
+      <ul className={styles.stats}>
+        <li className={styles.statsItems}>
+          <span className="label">Followers</span>
+          <span className="quantity">{user.stats.followers}</span>
         </li>
-        <li>
-          <span class="label">Views</span>
-          <span class="quantity">{user.stats.views}</span>
+        <li className={styles.statsItems}>
+          <span className="label">Views</span>
+          <span className="quantity">{user.stats.views}</span>
         </li>
-        <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{user.stats.likes}</span>
+        <li className={styles.statsItems}>
+          <span className="label">Likes</span>
+          <span className="quantity">{user.stats.likes}</span>
         </li>
       </ul>
     </div>

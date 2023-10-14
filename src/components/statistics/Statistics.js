@@ -1,10 +1,11 @@
 import data from 'components/statistics/data.json';
+import styles from 'components/statistics/statistic.module.css';
 
 const StaticticsList = ({ stats }) => {
   return (
-    <ul>
+    <ul className={styles.list}>
       {stats.map(stat => (
-        <li>
+        <li className={styles.items}>
           <span>{stat.label}</span>
           <span>{stat.percentage}</span>
         </li>
@@ -15,8 +16,8 @@ const StaticticsList = ({ stats }) => {
 
 export default function Statistics() {
   return (
-    <section class="statistics">
-      <h2 class="title">Upload stats</h2>
+    <section className={styles.statistics}>
+      <h2 class={styles.title}>Upload stats</h2>
 
       <div>
         <StaticticsList stats={data} />
