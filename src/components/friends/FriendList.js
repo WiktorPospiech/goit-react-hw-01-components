@@ -2,13 +2,15 @@ import friends from 'components/friends/friends.json';
 import styles from 'components/friends/friends.module.css';
 import clsx from 'clsx';
 
-const FriendList = ({ friends, isOnline }) => {
+const FriendList = ({ friends }) => {
   return (
     <>
       {friends.map(friend => (
         <li className={styles.item}>
           <span
-            className={clsx(styles.status, { [styles.isOnline]: isOnline })}
+            className={clsx(styles.status, {
+              [styles.isOnline]: friend.isOnline,
+            })}
           ></span>
           <img
             className="avatar"
